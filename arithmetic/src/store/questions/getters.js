@@ -1,26 +1,53 @@
 export default {
   // 列竖式计算
-  getCalculationQuestions(state){
+  getCalculationQuestions(state) {
+    // 题目数量
+    const num = 15;
+    const questions = state.calculation;
 
+    for (let i = 0; i < num; i++) {
+      const question = {
+        question: "",
+        answer: 0,
+      };
+      
+    }
 
-    return state.calculation;
+    return questions;
   },
   // 估算
-  getEstimateQuestions(state){
+  getEstimateQuestions(state) {
+    // 题目数量
+    const num = 5;
+    const questions = state.estimate;
 
+    for (let i = 0; i < num; i++) {}
 
-    return state.estimate;
+    return questions;
   },
   // 口算
-  getMentalQuestions(state){
+  getMentalQuestions(state) {
+    // 题目数量
+    const num = 20;
+    const questions = state.mental;
 
+    for (let i = 0; i < num; i++) {}
 
-    return state.mental;
+    return questions;
   },
 };
 
+// 功能：创造式子
+function createCalculationQuestion(type) {
+  const op = "*";
+  const num_2 = [getRandomNum(2), getRandomNum(2), getRandomNum(2)];
+  const num_3 = [getRandomNum(3), getRandomNum(3), getRandomNum(3)];
+}
 
-
+// 功能：产生随机数
+function getRandomNum(digit) {
+  return Math.floor(Math.random() * Math.pow(10, digit));
+}
 
 // 功能：产生随机数
 function createRandomNum(digit) {
